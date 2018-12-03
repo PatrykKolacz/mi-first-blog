@@ -1,12 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
 	<title>Testowy blog</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 </head>
 <body>
-	<div>
+	<div class="page-header">
         <h1><a href="/">Testowy blog</a></h1>
-    </div>
+    </div class="post">
     {% for post in posts %}
         <div>
             <p>Opublikowano: {{ post.published_date }}</p>
